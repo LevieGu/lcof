@@ -6,7 +6,7 @@ class Solution {
     int left = 0, right = nums.size() - 1;
     while (left < right) {
       int mid = left + (right - left) / 2;
-      bool isEven = (right - left) / 2 == 0;
+      bool isEven = (right - mid) % 2 == 0;
       if (nums[mid + 1] == nums[mid]) {
         if (isEven) {
           left = mid + 2;
